@@ -2,18 +2,18 @@
 Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in Wuhan University
 
 + Wave
-Author: Yajun Yu
+<br/> Author: Yajun Yu
     + 
 ----
 
 + PET
-Author: Zhongxing Li
+<br/> Author: Zhongxing Li
     + 
 
 ----
 
 + Artificial Inteligence
-Author: Yiang Wang
+<br/> Author: Yiang Wang
     + Programming Languages & Platforms
         + Python
         + Keras
@@ -28,6 +28,7 @@ Author: Yiang Wang
     + Noise Modeling
     + Performance Evaluation
     + Publications
+    + Code
 ----
 
 + Publications
@@ -35,5 +36,5 @@ Author: Yiang Wang
 ----
 
 + Appendix
-    + Code
+
 
