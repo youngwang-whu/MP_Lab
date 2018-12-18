@@ -25,11 +25,11 @@ import itertools
 
 
 # Read xls files
-ExcelFile1 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\140\\140.xlsx')
-ExcelFile2 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\142\\142.xlsx')
-ExcelFile3 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\144\\144.xlsx')
-ExcelFile4 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\146\\146.xlsx')
-ExcelFile5 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\148\\148.xlsx')
+ExcelFile1 = xlrd.open_workbook('140.xlsx')
+ExcelFile2 = xlrd.open_workbook('142.xlsx')
+ExcelFile3 = xlrd.open_workbook('144.xlsx')
+ExcelFile4 = xlrd.open_workbook('146.xlsx')
+ExcelFile5 = xlrd.open_workbook('148.xlsx')
 
 # load data
 def load_data(ExcelFile):
@@ -91,11 +91,11 @@ for i in range(n_classes):
     fpr[i], tpr[i], _ = roc_curve(y_test[:, i], probas[:, i])
     roc_auc[i] = auc(fpr[i], tpr[i])
 
-# Compute micro-average ROC curve and ROC area（方法二）
+# Compute micro-average ROC curve and ROC area
 fpr["micro"], tpr["micro"], _ = roc_curve(y_test.ravel(), probas.ravel())
 roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
-# Compute macro-average ROC curve and ROC area（方法一）
+# Compute macro-average ROC curve and ROC area
 # First aggregate all false positive rates
 all_fpr = np.unique(np.concatenate([fpr[i] for i in range(n_classes)]))
 
@@ -182,12 +182,12 @@ true_label = np.argmax(y_test, axis=1)
 conf_matrix = confusion_matrix(true_label, pred_label)
 print(conf_matrix)
 
-"""
+
 # Plot non-normalized confusion matrix
 plt.figure()
 plot_confusion_matrix(conf_matrix, classes=np.array(['E=140MeV', 'E=142MeV', 'E=144MeV', 'E=146MeV','E=148MeV']),
                       title='Confusion matrix, without normalization')
-"""
+
 # Plot normalized confusion matrix
 plt.figure()
 plot_confusion_matrix(conf_matrix, classes=np.array(['140MeV', '142MeV', '144MeV', '146MeV','148MeV']),
@@ -200,9 +200,9 @@ plt.show()
 
 
 # 加载保存在磁盘中的分类器
-# plt.savefig('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\confusion_matrix.jpg')
-# clf = joblib.load('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\class_energy.pkl')
-# joblib.dump(clf, 'C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\class_energy.pkl')
+plt.savefig（'confusion_matrix.jpg')
+# clf = joblib.load('class_energy.pkl')
+# joblib.dump(clf, 'class_energy.pkl')
 
 
 

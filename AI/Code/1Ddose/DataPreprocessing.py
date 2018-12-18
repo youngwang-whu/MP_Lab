@@ -10,16 +10,16 @@ import xlrd
 
 
 # Read xls files for E=110~118,170~178
-ExcelFile110 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\110ad.xlsx')
-ExcelFile112 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\112ad.xlsx')
-ExcelFile114 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\114ad.xlsx')
-ExcelFile116 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\116ad.xlsx')
-ExcelFile118 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\118ad.xlsx')
-ExcelFile170 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\170ad.xlsx')
-ExcelFile172 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\172ad.xlsx')
-ExcelFile174 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\174ad.xlsx')
-ExcelFile176 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\176ad.xlsx')
-ExcelFile178 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\178ad.xlsx')
+ExcelFile110 = xlrd.open_workbook('110ad.xlsx')
+ExcelFile112 = xlrd.open_workbook('112ad.xlsx')
+ExcelFile114 = xlrd.open_workbook('114ad.xlsx')
+ExcelFile116 = xlrd.open_workbook('116ad.xlsx')
+ExcelFile118 = xlrd.open_workbook('118ad.xlsx')
+ExcelFile170 = xlrd.open_workbook('170ad.xlsx')
+ExcelFile172 = xlrd.open_workbook('172ad.xlsx')
+ExcelFile174 = xlrd.open_workbook('174ad.xlsx')
+ExcelFile176 = xlrd.open_workbook('176ad.xlsx')
+ExcelFile178 = xlrd.open_workbook('178ad.xlsx')
 
 ExcelFile = [ExcelFile110, ExcelFile112, ExcelFile114, ExcelFile116, ExcelFile118, ExcelFile170, ExcelFile172,
              ExcelFile174, ExcelFile176, ExcelFile178]
@@ -56,18 +56,17 @@ x, y = get_TrainSet(ExcelFile)
 
 
 # Read xls files for E=140~148MeV
-ExcelFile140 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\140\\140.xlsx')
-ExcelFile142 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\142\\142.xlsx')
-ExcelFile144 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\144\\144.xlsx')
-ExcelFile146 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\146\\146.xlsx')
-ExcelFile148 = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\148\\148.xlsx')
+ExcelFile140 = xlrd.open_workbook('140.xlsx')
+ExcelFile142 = xlrd.open_workbook('142.xlsx')
+ExcelFile144 = xlrd.open_workbook('144.xlsx')
+ExcelFile146 = xlrd.open_workbook('146.xlsx')
+ExcelFile148 = xlrd.open_workbook('148.xlsx')
 
 # Load data for E=140~148MeV
 def LoadData(ExcelFile):
     # Get the contents of sheet
     sheet = ExcelFile.sheet_by_name('Sheet1')
     # Get the whole value of sheet
-    # Highlight:通过列表索引的方法，简单解决了读取excel列表时产生空格的问题
     cols = []
     for i in np.arange(sheet.ncols):
         cols.append(sheet.col_values(i)[1:])

@@ -11,7 +11,7 @@ import xlrd
 
 
 # Load validated data
-ExcelFile = xlrd.open_workbook('C:\\Users\\wangya\\Desktop\\MedPhysics\\Validation_data.xlsx')
+ExcelFile = xlrd.open_workbook('Validation_data.xlsx')
 # Get the contents of sheet
 sheet = ExcelFile.sheet_by_name('Sheet1')
 
@@ -42,7 +42,7 @@ y_p = b[:, :, np.newaxis]
 
 
 # Load model
-model = tf.keras.models.load_model('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\rnn_model.h5')
+model = tf.keras.models.load_model('rnn_model.h5')
 # Predict
 y_pred = model.predict(x_p)
 # Plot figure of 3 situations

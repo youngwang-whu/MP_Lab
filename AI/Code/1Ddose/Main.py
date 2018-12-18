@@ -30,4 +30,4 @@ model, hist, score = Model.train_model_lstm(x_train, y_train, x_test, y_test, 12
 Model.Get_ModelLoss_figure(hist)
 
 # Save the model
-model.save('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\rnn_model_12.h5')
+model.save('rnn_model.h5')

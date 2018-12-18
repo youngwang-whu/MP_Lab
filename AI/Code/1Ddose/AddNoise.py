@@ -25,9 +25,9 @@ x_train = X[:, :, np.newaxis]
 y_train = Y[:, :, np.newaxis]
 
 # Train with new data
-model = tf.keras.models.load_model('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\rnn_model.h5')
+model = tf.keras.models.load_model('rnn_model.h5')
 hist = model.fit(x_train, y_train, batch_size=80, epochs=200, verbose=1, validation_split=0.2, shuffle=True)
 print(hist.history)
 
-model.save('C:\\Users\\wangya\\Desktop\\MedPhysics\\DataRegression\\rnn_model_0903.h5')
+model.save('rnn_model_0903.h5')
 
