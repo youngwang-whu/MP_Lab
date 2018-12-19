@@ -2,8 +2,8 @@
 Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in Wuhan University
 ----------------------------------------
 + Basic Tutorial
-    + Markdown
-    + Git & Github
+    + [Markdown](https://github.com/youngwang-whu/MP_Lab/blob/master/Basic%20Tutorial/Markdown/main.md)
+    + [Git & Github](https://github.com/youngwang-whu/MP_Lab/blob/master/Basic%20Tutorial/Git%20%26%20Github/main.md)
     + [Github Desktop & GitKraken](https://github.com/youngwang-whu/MP_Lab/blob/master/Basic%20Tutorial/Github%20Desktop%20%26%20GitKraken/main.md)
 
 ----------------------------------------
