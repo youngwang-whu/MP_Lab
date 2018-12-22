@@ -11,7 +11,16 @@
 It is helpful to store, manage and even online-share files between coworkers without saving a large number of copies in your PC. 
 
 ## Simple Tutorial
-There are three parts in 
+There are four main parts in this process: workspace, staging, Local Repository and Remote Repository. 
+<br/> Workspace is the working directory in your local PC, in which you save files. And if you use the command 
+> $ git add filename
+
+the changes will be submitted to staging. Then you use the command
+> $ git commit -m "comments"
+
+in order to add comments of modifications to Local repository. 
+
+
 
 [Figure 1](https://github.com/youngwang-whu/MP_Lab/blob/master/Basic%20Tutorial/Git%20%26%20Github/git.png)
 
