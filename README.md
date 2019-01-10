@@ -12,8 +12,10 @@ Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in
 
 ----------------------------------------
 + Proton-induced radiation signal
+    + GATE simulation
     + PET
-    + GATE
+    + Flat panel detector
+    
 
 ----------------------------------------
 + CAEN 
