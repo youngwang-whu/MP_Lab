@@ -32,12 +32,20 @@ Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in
         + RNN
             + LSTM
             + Others
-    + Training Set 
-    + Model Training
-    + Noise Modeling
-    + Performance Evaluation
-    + References
-    + Code
+    + Activity-dose
+        + Training Set 
+        + Model Training
+        + Noise Modeling
+        + Performance Evaluation
+        + References
+        + Code
+    + Flat Panel with Collimator
+        + Training Set 
+        + Model Training
+        + Noise Modeling
+        + Performance Evaluation
+        + References
+        + Code
 
 ----------------------------------------
 
