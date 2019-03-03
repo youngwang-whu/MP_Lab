@@ -38,14 +38,14 @@ Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in
         + Noise Modeling
         + Performance Evaluation
         + References
-        + Code
+        + [Code](https://github.com/youngwang-whu/MP_Lab/tree/master/Artificial_Inteligence/Activity-dose/Code)
     + [Flat Panel with Collimator](https://github.com/youngwang-whu/MP_Lab/tree/master/Artificial_Inteligence/Flat_Panel_with_Collimator)
         + Training Set 
         + Model Training
         + Noise Modeling
         + Performance Evaluation
         + References
-        + Code
+        + [Code](https://github.com/youngwang-whu/MP_Lab/tree/master/Artificial_Inteligence/Flat_Panel_with_Collimator/Code)
 
 ----------------------------------------
 
