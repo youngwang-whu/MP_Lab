@@ -118,12 +118,4 @@ Model.Get_ModelLoss_figure(hist)
 # Save the model
 model.save('rnn_model.h5')
 
-
-class (object):
-
-    def __init__(self, depth, energy):
-        self.depth = depth
-        self.energy = energy
-
-    def
             
