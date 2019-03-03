@@ -22,7 +22,7 @@ Documents of [Medical Physics Research Center](http://medphysics.whu.edu.cn/) in
 
 ----------------------------------------
 
-+ Artificial Inteligence
++ [Artificial Inteligence](https://github.com/youngwang-whu/MP_Lab/tree/master/Artificial_Inteligence)
     + [Programming Languages & Platforms](https://github.com/youngwang-whu/MP_Lab/tree/master/Artificial_Inteligence/Programming_Languages&Platforms)
         + Python
         + Keras
