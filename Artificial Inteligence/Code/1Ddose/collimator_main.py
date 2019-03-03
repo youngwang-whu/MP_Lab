@@ -12,7 +12,7 @@ import xlrd
 
 
 # Load validated data
-ExcelFile = xlrd.open_workbook('C:\\Users\\wangya\\Documents\\Documents_wya\\MedPhysics\\collimator_H3.xlsx')
+ExcelFile = xlrd.open_workbook('D:\\collimator_data\\collimator_H3.xlsx')
 # Get the contents of sheet
 P1 = ExcelFile.sheet_by_name('P1')
 P3 = ExcelFile.sheet_by_name('P3')
@@ -98,7 +98,7 @@ model.compile(optimizer=adam,
 print(model.summary())
 print('training---------------------------------')
 
-hist = model.fit(x_train, y_train, verbose=1, validation_split=0.2, shuffle=True)
+hist = model.fit(x_train, y_train, verbose=1, validation_split=0.2, shuffle=True，epochs=1000)
 print(hist.history)
 
 score = model.evaluate(x_test, y_test, verbose=0)
@@ -126,4 +126,4 @@ class (object):
         self.energy = energy
 
     def
-
+            
