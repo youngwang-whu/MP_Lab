@@ -16,7 +16,7 @@ import xlrd
 
 
 # Load validated data
-ExcelFile = xlrd.open_workbook('C:\\Users\\wangya\\Documents\\Documents_wya\\MedPhysics\\collimator_H3.xlsx')
+ExcelFile = xlrd.open_workbook('collimator_H3.xlsx')
 # Get the contents of sheet
 P1 = ExcelFile.sheet_by_name('P1')
 P3 = ExcelFile.sheet_by_name('P3')
@@ -72,5 +72,6 @@ P9_dose = P_dose(P9)
 # Training Set
 X = np.concatenate((P1_detect, P3_detect, P5_detect, P7_detect, P9_detect), axis=0)
 Y = np.concatenate((P1_dose, P3_dose, P5_dose, P7_dose, P9_dose), axis=0)
-np.save("collimator_H3_X.npy", X)
-np.save("collimator_H3_Y.npy", Y)
+np.save("MP_Lab\\Artificial_Inteligence\\Flat_Panel_with_Collimator\\data\\collimator_H3_X.npy", X)
+np.save("MP_Lab\\Artificial_Inteligence\\Flat_Panel_with_Collimator\\data\\collimator_H3_Y.npy", Y)
+
