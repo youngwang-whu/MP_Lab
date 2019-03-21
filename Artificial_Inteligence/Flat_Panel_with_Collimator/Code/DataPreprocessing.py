@@ -12,12 +12,11 @@ Created on Mon Mar  4 17:34:35 2019
 from __future__ import absolute_import, division, print_function
 
 import numpy as np
-from scipy import interpolate
 import xlrd
 
 
 # Load validated data
-ExcelFile = xlrd.open_workbook('D:\\collimator_data\\collimator_H3.xlsx')
+ExcelFile = xlrd.open_workbook('C:\\Users\\wangya\\Documents\\Documents_wya\\MedPhysics\\collimator_H3.xlsx')
 # Get the contents of sheet
 P1 = ExcelFile.sheet_by_name('P1')
 P3 = ExcelFile.sheet_by_name('P3')
@@ -42,16 +41,12 @@ def normalize(data):
     return [(float(i) - mn) / (mx-mn) for i in data]
 
 
-
 def P_detect(Pi):
-    x_old = np.linspace(1, 299, 150)
-    x_new = np.linspace(1, 299, 299)
-    P = np.empty((8, 299))
+    P = np.empty((8, 150))
     for i in range(8):
-        y = np.array(Pi.col_values(i+1)[1:151])
-        f = interpolate.interp1d(x_old, y, kind='quadratic')
-        P[i, :] = normalize(f(x_new))
+        P[i, :] = normalize(np.array(Pi.col_values(i+1)[1:151]))
     return P
+
 
 P1_detect = P_detect(P1)
 P3_detect = P_detect(P3)
@@ -60,12 +55,12 @@ P7_detect = P_detect(P7)
 P9_detect = P_detect(P9)
 
 
-
 def P_dose(Pi):
     P = np.empty((8, 299))
     for i in range(10, 17):
         P[i-10, :] = normalize(np.array(Pi.col_values(i)[1:300]))
     return P
+
 
 P1_dose = P_dose(P1)
 P3_dose = P_dose(P3)

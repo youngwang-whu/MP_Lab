@@ -76,39 +76,6 @@ def seq2seq_build_model(hidden_dim, num_encoder_tokens, num_decoder_tokens):
 
     return model
 
-"""
-    # encoder部分
-    encoder_top_layer = LSTM(units=hidden_dim, return_sequences=False)
-
-    # decoder部分
-    decoder_top_layer = LSTM(units=hidden_dim, return_sequences=True)
-    decoder_top_layer.get_weights()
-
-    #  模型构建
-    en_de_model = Sequential()
-    en_de_model.add(Embedding(input_dim=vocab_size,
-                          output_dim=hidden_dim,
-                          input_length=input_maxlen))
-    en_de_model.add(encoder_top_layer)
-    en_de_model.add(RepeatVector(tar_maxlen))
-    en_de_model.add(decoder_top_layer)
-
-    en_de_model.add(TimeDistributedDense(output_dim))
-    en_de_model.add(Activation('softmax'))
-    en_de_model.compile(loss='categorical_crossentropy', optimizer='rmsprop')
-    en_de_model.fit(inputs_train, tars_train, batch_size=3, nb_epoch=1, show_accuracy=True)
-
-
-    model.add(tf.keras.layers.LSTM(
-        input_shape=(302, 1),
-        units=10,
-        return_sequences=True,       # True: output at all steps. False: output as last step.
-        stateful=False,              # True: the final state of batch1 is feed into the initial state of batch2
-    ))
-    # add output layer
-    model.add(tf.keras.layers.TimeDistributed(tf.keras.layers.Dense(1)))
-"""
-
 
 def train_model_NN(x_train, y_train, x_test, y_test, batch_size, epochs):
     model = NN_build_model()
@@ -163,8 +130,6 @@ def Get_ModelAccuracy_figure(hist):
     plt.xlabel('epoch')
     plt.legend(['train', 'test'], loc='upper left')
     plt.show()
-
-
 
 
 def Get_ModelLoss_figure(hist):
