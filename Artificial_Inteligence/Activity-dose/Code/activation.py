@@ -40,15 +40,15 @@ def normalize(data):
 
 # 反向
 c = np.arange(0, 302)
-plt.plot(c, normalize(y_predict[1, :]), linestyle='--')
-plt.plot(c, X[1, ::-1], linestyle='--')
-plt.plot(c, Y[1, ::-1], linestyle='--')
+plt.plot(c, normalize(y_predict[1, :]), 'r')
+plt.plot(c, X[1, ::-1], 'b')
+plt.plot(c, Y[1, ::-1], 'g')
 plt.show()
 # 切片调整
 c = np.arange(0, 302)
-plt.plot(c, normalize(y_predict[1, :]), linestyle='--')
-plt.plot(c, x[1, :], linestyle='--')
-plt.plot(c, y[1, :], linestyle='--')
+plt.plot(c, normalize(y_predict[1, :]), 'r')
+plt.plot(c, x[1, :], 'b')
+plt.plot(c, y[1, :], 'g')
 plt.show()
 
 # plot activation
